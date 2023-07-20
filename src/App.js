@@ -1,10 +1,11 @@
 import "./App.css";
+import Navigation from "./components/navigation/Navigation";
 
 function App() {
   return (
-    <div>
-      <h1>rank math</h1>
-    </div>
+    <>
+     <Navigation/>
+    </>
   );
 }
 
