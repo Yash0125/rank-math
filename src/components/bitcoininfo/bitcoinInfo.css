@@ -1,0 +1,146 @@
+.bitcoin-container {
+  background-color: aqua;
+  display: flex;
+  flex-direction: column;
+  max-width: 90vw;
+  margin: 1vw 5vw;
+  padding: 20px; /* Add some overall padding */
+  border-radius: 50px;
+  filter: drop-shadow(0px 59px 55.5px rgba(154, 155, 176, 0.17));
+  background-color: #ffffff;
+}
+
+.top-row {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+}
+
+.bitcoin-logo {
+  margin: 0 20px;
+  width: 100px;
+  height: 100px;
+  border-radius: 80px;
+  background-image: linear-gradient(0deg, #ff8f17 0%, #ffc743 100%);
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  display: block;
+  height: 60px;
+  color: #ffffff;
+  margin:auto;
+}
+
+.bitcoin {
+  font-size: 53px;
+  color: #4c5968;
+  font-weight: bold;
+}
+
+.btc {
+  font-size: 53px;
+  color: #aeb8c4;
+  font-weight: bold;
+  margin-left: auto; /* Push BTC to the right (auto margin) on larger screens */
+}
+.mid-row {
+  display: flex;
+  align-items: flex-start;
+  font-size: 80px; /* Increase the font size for the BTC value */
+  color: #4c5968;
+  font-weight: bold;
+  padding: 20px;
+  margin-left: 3vw;
+}
+
+.last-row {
+  display: flex;
+  margin-left: 3vw;
+  justify-content: space-between; 
+  align-items: center;
+  color: #4c5968;
+  font-weight: bold;
+  padding: 20px;
+}
+
+.bitcoin-price {
+  font-size: 55px;
+  color: #aeb8c4;
+}
+
+.bicoin-profit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 50px;
+  color: #ffffff;
+  border-radius: 20px;
+  background-color: #ee225d;
+  margin-left: auto; /* Align to the right end */
+}
+
+.dropdown {
+  width: 50px;
+  cursor: pointer;
+  display: flex;
+  position: relative;
+  left: 40vw;
+  align-items: center;
+  justify-content: center;
+}
+/* Media Query for Mobile Devices */
+@media (max-width: 425px) {
+  .bitcoin-logo {
+    margin: 0 20px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50px;
+    background-image: linear-gradient(0deg, #ff8f17 0%, #ffc743 100%);
+    display: flex;
+    align-items: center;
+  }
+  .bitcoin {
+    font-size: 30px;
+    color: #4c5968;
+    font-weight: bold;
+  }
+  .btc {
+    position: relative;
+    font-size: 30px;
+    left: auto; /* Reset the position on smaller screens */
+    margin-left: 10px; /* Add a smaller margin on smaller screens */
+  }
+  .bitcoin-price {
+    font-size: 30px;
+    color: #4c5968;
+  }
+  .bicoin-profit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 50px;
+    color: #ffffff;
+    border-radius: 20px;
+    background-color: #ee225d;
+    position: relative;
+    right: 20px;
+  }
+  .mid-row {
+    display: flex;
+    align-items: flex-start;
+    font-size: 40px; /* Increase the font size for the BTC value */
+    color: #4c5968;
+    font-weight: bold;
+    margin-left: 3vw;
+  }
+
+  .last-row {
+    flex-direction: row; /* Revert to row layout on smaller screens */
+    justify-content: space-between; /* Distribute the elements horizontally */
+  }
+}
