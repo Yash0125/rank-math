@@ -1,0 +1,144 @@
+.bitcoin-stat {
+  width: 90vw;
+}
+
+.timeline {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 -10px; 
+  overflow-x: auto; 
+  white-space: nowrap;}
+
+.timeline ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.timeline li {
+  cursor: pointer;
+  margin: auto;
+  color: #aeb8c4;
+
+  margin: 0 14vw;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.timeline li.selected {
+  background-color: #aeb8c4;
+  border-radius: 20px;
+  color: #ffffff;
+}
+
+.timeline li:not(:last-child) {
+  margin-right: 10px;
+}
+
+.stat {
+  width: 90vw;
+  height: 30vh;
+  margin: 1vh 5vw;
+  border-radius: 50px;
+  filter: drop-shadow(0px 59px 55.5px rgba(154, 155, 176, 0.17));
+  background-color: #ffffff;
+  position: relative; 
+}
+
+.sub-stat {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; 
+  margin-top: 10px;
+  padding-top: 20px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.red-dot {
+  margin-left: 10px;
+  background-color: red;
+}
+
+.green-dot {
+  background-color: green;
+  margin-left: 5px;
+}
+
+.lower-text {
+  margin-right: 72vw;
+  color: #9a9bb0;
+}
+
+.higher-text {
+  margin-left: 10px;
+  color: #9a9bb0;
+
+}
+
+.left-stat {
+  margin-right: 50px;
+}
+.bitcoinstat-price {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+}
+.bitcoinstat-price span{
+    color: #4c5968;
+    font-weight: bold;
+}
+.yellow-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 5px;
+
+    background: linear-gradient(-40deg, #ffc743 0%, #ff8f17 100%);
+  }
+
+
+@media screen and (max-width: 1024px) {
+  .lower-text {
+    margin-right: 60vw;
+  }
+  .timeline li {
+    cursor: pointer;
+    margin: auto;
+    margin: 0 11vw;
+    padding: 10px 20px;
+    border-radius: 5px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .lower-text {
+    margin-right: 50vw;
+  }
+  .timeline li {
+    cursor: pointer;
+    margin: auto;
+    margin: 0 9vw;
+    padding: 10px 20px;
+    border-radius: 5px;
+  }
+}
+@media screen and (max-width: 425px) {
+  .lower-text {
+    margin-right: 38vw;
+  }
+  .timeline li {
+    cursor: pointer;
+    margin: auto;
+    margin: 0 3vw;
+    padding: 10px 20px;
+    border-radius: 5px;
+  }
+}
