@@ -4,7 +4,7 @@
   flex-direction: column;
   max-width: 90vw;
   margin: 1vw 5vw;
-  padding: 20px; /* Add some overall padding */
+  padding: 20px;
   border-radius: 50px;
   filter: drop-shadow(0px 59px 55.5px rgba(154, 155, 176, 0.17));
   background-color: #ffffff;
@@ -92,6 +92,36 @@
   align-items: center;
   justify-content: center;
 }
+
+.buttons-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+
+.buy-button,
+.sell-button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100px;
+}
+
+.buy-button {
+  background-color: #2c9782; 
+  color: #ffffff;
+  border: none;
+
+}
+
+.sell-button {
+  background-color: #bb5347;
+  color: #ffffff;
+  border: none;
+}
+
 /* Media Query for Mobile Devices */
 @media (max-width: 425px) {
   .bitcoin-logo {
@@ -111,8 +141,8 @@
   .btc {
     position: relative;
     font-size: 30px;
-    left: auto; /* Reset the position on smaller screens */
-    margin-left: 10px; /* Add a smaller margin on smaller screens */
+    left: auto; 
+    margin-left: 10px; 
   }
   .bitcoin-price {
     font-size: 30px;
@@ -133,14 +163,20 @@
   .mid-row {
     display: flex;
     align-items: flex-start;
-    font-size: 40px; /* Increase the font size for the BTC value */
+    font-size: 40px;
     color: #4c5968;
     font-weight: bold;
     margin-left: 3vw;
   }
 
   .last-row {
-    flex-direction: row; /* Revert to row layout on smaller screens */
-    justify-content: space-between; /* Distribute the elements horizontally */
+    flex-direction: row;
+    justify-content: space-between; 
+  }
+
+  .buy-button,
+  .sell-button {
+    width: 80px;
+    font-size: 14px;
   }
 }
