@@ -40,7 +40,7 @@ const Navigation = () => {
             <BiArrowFromBottom />
           </li>
           <hr />
-          <li>
+          <li className='remove'>
             <span>Remove</span>
             <IoMdRemoveCircleOutline />
           </li>
