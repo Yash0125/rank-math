@@ -1,0 +1,7 @@
+.bitcoinTrade-container {
+  display: flex;
+  flex-direction: row;
+  width: 90vw;
+  margin: 5vh 5vw;
+  gap: 2vw;
+}
