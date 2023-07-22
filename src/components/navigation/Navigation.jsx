@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import './navigation.css';
+import React, { useState } from "react";
+import "./navigation.css";
 import { GrMoreVertical } from "react-icons/gr";
 import { SlArrowLeft } from "react-icons/sl";
 import { CgRename } from "react-icons/cg";
@@ -11,19 +11,19 @@ const Navigation = () => {
   const [showMoreIcons, setShowMoreIcons] = useState(false);
 
   const handleMoreIconClick = () => {
-    setShowMoreIcons(prevState => !prevState);
+    setShowMoreIcons((prevState) => !prevState);
   };
 
   return (
-    <header className='navigation'>
-      <div className='left-icon'>
+    <header className="navigation">
+      <div className="left-icon">
         <SlArrowLeft />
       </div>
-      <h1 className='title'>Bitcoin wallet</h1>
-      <div className='right-icon' onClick={handleMoreIconClick}>
+      <h1 className="title">Bitcoin wallet</h1>
+      <div className="right-icon" onClick={handleMoreIconClick}>
         <GrMoreVertical />
       </div>
-      <div className={`more-icons ${showMoreIcons ? 'visible' : 'hidden'}`}>
+      <div className={`more-icons ${showMoreIcons ? "visible" : "hidden"}`}>
         <ul>
           <li>
             <span>Edit</span>
@@ -40,7 +40,7 @@ const Navigation = () => {
             <BiArrowFromBottom />
           </li>
           <hr />
-          <li className='remove'>
+          <li className="remove">
             <span>Remove</span>
             <IoMdRemoveCircleOutline />
           </li>
@@ -49,6 +49,6 @@ const Navigation = () => {
       </div>
     </header>
   );
-}
+};
 
 export default Navigation;

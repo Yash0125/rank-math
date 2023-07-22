@@ -43,7 +43,6 @@
   
     .left-icon,
     .right-icon {
-      /* margin: 10px 0; */
       width: 10%;
     }
   
@@ -63,7 +62,7 @@
     border: 1px solid #ccc;
     display: flex;
     flex-direction: column;
-    align-items: flex-end; /* Align items to the right */
+    align-items: flex-end; 
   }
   
   .more-icons.visible {

@@ -1,9 +1,16 @@
-import React, { useState } from 'react';
-import './bitcoinStat.css';
-import { LineChart, Line, XAxis, ReferenceLine, CartesianGrid, ResponsiveContainer } from 'recharts';
+import React, { useState } from "react";
+import "./bitcoinStat.css";
+import {
+  LineChart,
+  Line,
+  XAxis,
+  ReferenceLine,
+  CartesianGrid,
+  ResponsiveContainer,
+} from "recharts";
 
 const BitcoinStat = () => {
-  const [selectedTimeline, setSelectedTimeline] = useState('Day');
+  const [selectedTimeline, setSelectedTimeline] = useState("Day");
   const lineChartData = [
     {
       pv: 180,
@@ -36,42 +43,42 @@ const BitcoinStat = () => {
   };
 
   return (
-    <section className='bitcoin-stat'>
-      <div className='timeline'>
+    <section className="bitcoin-stat">
+      <div className="timeline">
         <ul>
           <li
-            className={selectedTimeline === 'Day' ? 'selected' : ''}
-            onClick={() => handleTimelineChange('Day')}
+            className={selectedTimeline === "Day" ? "selected" : ""}
+            onClick={() => handleTimelineChange("Day")}
           >
             Day
           </li>
           <li
-            className={selectedTimeline === 'Week' ? 'selected' : ''}
-            onClick={() => handleTimelineChange('Week')}
+            className={selectedTimeline === "Week" ? "selected" : ""}
+            onClick={() => handleTimelineChange("Week")}
           >
             Week
           </li>
           <li
-            className={selectedTimeline === 'Month' ? 'selected' : ''}
-            onClick={() => handleTimelineChange('Month')}
+            className={selectedTimeline === "Month" ? "selected" : ""}
+            onClick={() => handleTimelineChange("Month")}
           >
             Month
           </li>
           <li
-            className={selectedTimeline === 'Year' ? 'selected' : ''}
-            onClick={() => handleTimelineChange('Year')}
+            className={selectedTimeline === "Year" ? "selected" : ""}
+            onClick={() => handleTimelineChange("Year")}
           >
             Year
           </li>
         </ul>
       </div>
       <div className="stat">
-      <div className="sub-stat">
-        <div className="dot red-dot" />
-        <span className="lower-text">Lower: $4.895</span>
-        <span className="higher-text">Higher: $6.857</span>
-        <div className="dot green-dot" />
-      </div>
+        <div className="sub-stat">
+          <div className="dot red-dot" />
+          <span className="lower-text">Lower: $4.895</span>
+          <span className="higher-text">Higher: $6.857</span>
+          <div className="dot green-dot" />
+        </div>
         <ResponsiveContainer width="100%" height={212}>
           <LineChart width="100%" height={250} data={lineChartData}>
             <XAxis
@@ -82,20 +89,23 @@ const BitcoinStat = () => {
               stroke="#858585"
               dataKey="name"
             />
-            {/* Remove the YAxis */}
             <CartesianGrid stroke="#f5f5f5" />
             {lineChartData.map((item, i) => (
-              <ReferenceLine y={i * 200} key={i} strokeWidth={1} stroke="#EAEAEA" />
+              <ReferenceLine
+                y={i * 200}
+                key={i}
+                strokeWidth={1}
+                stroke="#EAEAEA"
+              />
             ))}
             <Line
               type="monotone"
               dot={false}
               dataKey="pv"
               strokeWidth={3}
-              stroke="#FFD700" // Yellow color for the line
+              stroke="#FFD700" 
               fill='url("#f99d21")'
             />
-            {/* Remove the other line */}
           </LineChart>
         </ResponsiveContainer>
         <div className="bitcoinstat-price">
@@ -103,7 +113,6 @@ const BitcoinStat = () => {
           <span>1 BTC=$5.483</span>
         </div>
       </div>
-     
     </section>
   );
 };
