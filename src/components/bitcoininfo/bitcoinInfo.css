@@ -51,7 +51,8 @@
   font-size: 80px; 
   color: #4c5968;
   font-weight: bold;
-  padding: 20px;
+  padding: 0 20px;
+  margin-top: 0;
   margin-left: 3vw;
 }
 
@@ -145,6 +146,9 @@
   .bitcoin-price {
     font-size: 30px;
     color: #4c5968;
+  }
+  .dropdown{
+    left: 30vw;
   }
   .bicoin-profit {
     display: flex;
